@@ -7,12 +7,18 @@
     
 import SwiftUI
 import SwiftData
+import CustomAlerts
 
 @main
 struct NumericFactsApp: App {
-    var sharedModelContainer: ModelContainer = {
+    
+    // MARK: - Properties. Private
+    
+    @State private var viewModel: NumericFactsViewModel = NumericFactsViewModel(service: NetworkService())
+    @State private var appAlert: AlertNotice?
+    private var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            NumericFact.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
         
@@ -23,11 +29,15 @@ struct NumericFactsApp: App {
         }
     }()
     
+    // MARK: - Root scene
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environment(self.viewModel)
+                .environmentAlert($appAlert)
+                .modelContainer(sharedModelContainer)
         }
-        .modelContainer(sharedModelContainer)
     }
     
 }

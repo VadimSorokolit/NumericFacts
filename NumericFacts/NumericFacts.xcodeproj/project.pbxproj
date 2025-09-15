@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		DDE7BC0B2E781735003BA6E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDE7BC062E781735003BA6E0 /* Assets.xcassets */; };
-		DDE7BC0C2E781735003BA6E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC072E781735003BA6E0 /* ContentView.swift */; };
-		DDE7BC0D2E781735003BA6E0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC082E781735003BA6E0 /* Item.swift */; };
+		DDE7BC0C2E781735003BA6E0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC072E781735003BA6E0 /* HomeView.swift */; };
+		DDE7BC0D2E781735003BA6E0 /* NumericFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC082E781735003BA6E0 /* NumericFact.swift */; };
 		DDE7BC0E2E781735003BA6E0 /* NumericFactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC092E781735003BA6E0 /* NumericFactsApp.swift */; };
+		DDE7BC162E78217E003BA6E0 /* NumericFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC152E78217D003BA6E0 /* NumericFactsViewModel.swift */; };
+		DDE7BC182E782361003BA6E0 /* FactDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC172E78235B003BA6E0 /* FactDetailsView.swift */; };
+		DDE7BC1D2E783F90003BA6E0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC1C2E783F81003BA6E0 /* NetworkService.swift */; };
+		DDE7BC232E785925003BA6E0 /* CustomAlerts in Frameworks */ = {isa = PBXBuildFile; productRef = DDE7BC222E785925003BA6E0 /* CustomAlerts */; };
+		DDE7BC252E787729003BA6E0 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC242E787728003BA6E0 /* DetailsCell.swift */; };
+		DDE7BC272E788726003BA6E0 /* NumberFactResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE7BC262E788725003BA6E0 /* NumberFactResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DDE7BBF62E781723003BA6E0 /* NumericFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumericFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDE7BC062E781735003BA6E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DDE7BC072E781735003BA6E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		DDE7BC082E781735003BA6E0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DDE7BC072E781735003BA6E0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DDE7BC082E781735003BA6E0 /* NumericFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericFact.swift; sourceTree = "<group>"; };
 		DDE7BC092E781735003BA6E0 /* NumericFactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericFactsApp.swift; sourceTree = "<group>"; };
+		DDE7BC152E78217D003BA6E0 /* NumericFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericFactsViewModel.swift; sourceTree = "<group>"; };
+		DDE7BC172E78235B003BA6E0 /* FactDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDetailsView.swift; sourceTree = "<group>"; };
+		DDE7BC1C2E783F81003BA6E0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		DDE7BC202E78557F003BA6E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		DDE7BC242E787728003BA6E0 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		DDE7BC262E788725003BA6E0 /* NumberFactResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDE7BC232E785925003BA6E0 /* CustomAlerts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +64,10 @@
 		DDE7BC0A2E781735003BA6E0 /* NumericFacts */ = {
 			isa = PBXGroup;
 			children = (
+				DDE7BC202E78557F003BA6E0 /* Info.plist */,
 				DDE7BC142E781794003BA6E0 /* AppMain */,
 				DDE7BC0F2E78173F003BA6E0 /* MVVM */,
+				DDE7BC192E783F26003BA6E0 /* Services */,
 				DDE7BC132E781765003BA6E0 /* Resources */,
 			);
 			path = NumericFacts;
@@ -63,23 +78,26 @@
 			children = (
 				DDE7BC122E78175B003BA6E0 /* ViewModel */,
 				DDE7BC112E78174F003BA6E0 /* Views */,
-				DDE7BC102E781747003BA6E0 /* Model */,
+				DDE7BC102E781747003BA6E0 /* Models */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
 		};
-		DDE7BC102E781747003BA6E0 /* Model */ = {
+		DDE7BC102E781747003BA6E0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DDE7BC082E781735003BA6E0 /* Item.swift */,
+				DDE7BC082E781735003BA6E0 /* NumericFact.swift */,
+				DDE7BC262E788725003BA6E0 /* NumberFactResponse.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DDE7BC112E78174F003BA6E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DDE7BC072E781735003BA6E0 /* ContentView.swift */,
+				DDE7BC242E787728003BA6E0 /* DetailsCell.swift */,
+				DDE7BC072E781735003BA6E0 /* HomeView.swift */,
+				DDE7BC172E78235B003BA6E0 /* FactDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,6 +105,7 @@
 		DDE7BC122E78175B003BA6E0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DDE7BC152E78217D003BA6E0 /* NumericFactsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,6 +126,30 @@
 			path = AppMain;
 			sourceTree = "<group>";
 		};
+		DDE7BC192E783F26003BA6E0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7BC1A2E783F4A003BA6E0 /* NetworkService */,
+				DDE7BC1B2E783F5B003BA6E0 /* LocalStorageService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DDE7BC1A2E783F4A003BA6E0 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				DDE7BC1C2E783F81003BA6E0 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		DDE7BC1B2E783F5B003BA6E0 /* LocalStorageService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocalStorageService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,6 +167,7 @@
 			);
 			name = NumericFacts;
 			packageProductDependencies = (
+				DDE7BC222E785925003BA6E0 /* CustomAlerts */,
 			);
 			productName = NumericFacts;
 			productReference = DDE7BBF62E781723003BA6E0 /* NumericFacts.app */;
@@ -153,6 +197,9 @@
 			);
 			mainGroup = DDE7BBED2E781723003BA6E0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DDE7BC212E785925003BA6E0 /* XCRemoteSwiftPackageReference "CustomAlerts" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DDE7BBF72E781723003BA6E0 /* Products */;
 			projectDirPath = "";
@@ -179,8 +226,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDE7BC0C2E781735003BA6E0 /* ContentView.swift in Sources */,
-				DDE7BC0D2E781735003BA6E0 /* Item.swift in Sources */,
+				DDE7BC0C2E781735003BA6E0 /* HomeView.swift in Sources */,
+				DDE7BC182E782361003BA6E0 /* FactDetailsView.swift in Sources */,
+				DDE7BC272E788726003BA6E0 /* NumberFactResponse.swift in Sources */,
+				DDE7BC252E787729003BA6E0 /* DetailsCell.swift in Sources */,
+				DDE7BC0D2E781735003BA6E0 /* NumericFact.swift in Sources */,
+				DDE7BC162E78217E003BA6E0 /* NumericFactsViewModel.swift in Sources */,
+				DDE7BC1D2E783F90003BA6E0 /* NetworkService.swift in Sources */,
 				DDE7BC0E2E781735003BA6E0 /* NumericFactsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +371,7 @@
 				DEVELOPMENT_TEAM = D28SS25G7Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NumericFacts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,6 +400,7 @@
 				DEVELOPMENT_TEAM = D28SS25G7Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NumericFacts/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -387,6 +441,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DDE7BC212E785925003BA6E0 /* XCRemoteSwiftPackageReference "CustomAlerts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/VadimSorokolit/CustomAlerts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.17;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DDE7BC222E785925003BA6E0 /* CustomAlerts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DDE7BC212E785925003BA6E0 /* XCRemoteSwiftPackageReference "CustomAlerts" */;
+			productName = CustomAlerts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDE7BBEE2E781723003BA6E0 /* Project object */;
 }
